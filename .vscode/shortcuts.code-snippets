@@ -1,0 +1,14 @@
+{
+  "To-rem Function": {
+    "prefix": "torem",
+    "body": [
+      "to-rem($1)"
+    ]
+  },
+  "Media-Min Function": {
+    "prefix": "mediamin",
+    "body": [
+      "@include media-min($1) {$2}"
+    ]
+  }
+}

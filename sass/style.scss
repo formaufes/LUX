@@ -1,0 +1,75 @@
+/*!
+Theme Name: Panorama Capixaba 2025
+Author: Webicos
+Author URI: https://webicos.com.br
+Description: Tema criado e disponibilizado para o novo site do Panorama Capixaba.
+Requires at least: 6.1
+Tested up to: 6.7
+Requires PHP: 5.6
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+*/
+
+@use "./global";
+@use "./abstracts" as *;
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  background: #222;
+  position: relative;
+  overflow: hidden;
+
+  &-bg {
+    width: 100%;
+    height: calc(100vh + to-rem(60));
+    // height: calc(100vh + to-rem(160));
+  }
+
+  &-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--white);
+    text-align: center;
+    padding: 0 to-rem(16);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 0 20px #000000;
+
+    h1 {
+      font-size: to-rem(32);
+      text-transform: uppercase;
+      font-weight: var(--extrabold);
+      letter-spacing: to-rem(4);
+      max-width: to-rem(526);
+
+      span {
+        display: block;
+      }
+
+      @include media-min(medium) {
+        font-size: to-rem(44);
+        max-width: to-rem(700);
+      }
+
+      @include media-min(desktop-small) {
+        font-size: to-rem(64);
+        max-width: to-rem(800);
+      }
+
+      @include media-min(desktop) {
+        span {
+          display: inline-block;
+        }
+        font-size: to-rem(64);
+        max-width: to-rem(1100);
+      }
+    }
+  }
+}
